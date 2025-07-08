@@ -1,7 +1,14 @@
 <?php
 include 'config.php';
+
 $id = $_GET['id'];
-$conn->query("DELETE FROM produk WHERE id=$id");
-header("Location: adminindex.php"); // ganti sesuai file utama
-exit();
+$sql = "DELETE FROM produk WHERE id=$id";
+
+if ($conn->query($sql) === TRUE) {
+  header("Location: index.php"); // kembali setelah hapus
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
 ?>
