@@ -26,17 +26,10 @@ include('db.php'); // Include public database connection
         <li><a href="#Beranda">Tentang</a></li>
         <li><a href="#katalog">Katalog</a></li>
         <li><a href="#lokasi">Lokasi</a></li>
-        <a href="logout.php">Logout</a>
 
         <?php if (!isset($_SESSION['login'])): ?>
   <li><a href="login.php">Login Admin</a></li>
 <?php endif; ?>
-
-    <?php if (isset($_SESSION['login'])): ?>
-      <li><a href="logout.php">Logout</a></li>
-    <?php endif; ?>
-  </ul>
-</nav>
       </ul>
     </nav>
   </header>
