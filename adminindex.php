@@ -22,6 +22,8 @@ if (!isset($_SESSION['login'])) {
     <nav>
       <ul>
         <li><a href="logout.php">Logout</a></li>
+        <li><a href="indextamu.php">Beranda</a></li>
+      
       </ul>
     </nav>
   </header>

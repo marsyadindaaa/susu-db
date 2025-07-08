@@ -30,6 +30,7 @@ include('db.php'); // Include public database connection
         <?php if (!isset($_SESSION['login'])): ?>
   <li><a href="login.php">Login Admin</a></li>
 <?php endif; ?>
+
       </ul>
     </nav>
   </header>
