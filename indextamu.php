@@ -28,8 +28,8 @@ include('db.php'); // Include public database connection
         <li><a href="#lokasi">Lokasi</a></li>
 
         <?php if (!isset($_SESSION['login'])): ?>
-  <li><a href="login.php">Login Admin</a></li>
-<?php endif; ?>
+        <li><a href="login.php">Admin</a></li>
+       <?php endif; ?>
 
       </ul>
     </nav>
