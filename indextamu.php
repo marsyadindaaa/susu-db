@@ -1,5 +1,6 @@
 <?php
 session_start();
+include('db.php'); // Include public database connection
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,6 +26,16 @@ session_start();
         <li><a href="#Beranda">Tentang</a></li>
         <li><a href="#katalog">Katalog</a></li>
         <li><a href="#lokasi">Lokasi</a></li>
+        <a href="logout.php">Logout</a>
+
+        <?php if (!isset($_SESSION['login'])): ?>
+  <li><a href="login.php">Login Admin</a></li>
+<?php endif; ?>
+
+    <?php if (isset($_SESSION['login'])): ?>
+      <li><a href="logout.php">Logout</a></li>
+    <?php endif; ?>
+  </ul>
 </nav>
       </ul>
     </nav>
@@ -62,8 +73,6 @@ session_start();
 
       <section id="katalog">
         <h2>Daftar Menu</h2>
-        <section id="katalog">
-  <h2>Daftar Menu</h2>
         <div class="produk">
           <!-- Sumur Series -->
           <div class="card-produk"><h3>Sumur Tawar</h3><p>Harga: 5k</p></div>
@@ -92,6 +101,27 @@ session_start();
           <div class="card-produk"><h3>Roti 2 Rasa</h3><p>Harga: 8k</p></div>
           <div class="card-produk"><h3>Roti 3 Rasa</h3><p>Harga: 9k</p></div>
           <div class="card-produk"><h3>Roti Keju</h3><p>Harga: 8k</p></div>
+
+          <!-- Dynamic Products from Database -->
+          <?php
+          // Query to fetch dynamic products
+          $result = $conn->query("SELECT * FROM produk ORDER BY id DESC");
+          if ($result && $result->num_rows > 0) {
+              // Loop over products and output as product cards
+              while ($row = $result->fetch_assoc()) {
+                  // Use htmlentities() to prevent XSS attacks
+                  $nama = htmlentities($row['nama_produk']);
+                  $harga = htmlentities($row['harga']);
+                  echo "<div class='card-produk'>";
+                  echo "<img src='https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop' alt='Gambar Produk' style='width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 10px;'>";
+                  echo "<h3>$nama</h3>";
+                  echo "<p>Harga: Rp " . number_format($harga, 0, ',', '.') . "</p>";
+                  echo "</div>";
+              }
+              // Free result set
+              $result->free();
+          }
+          ?>
         </div>
     </section>
 
