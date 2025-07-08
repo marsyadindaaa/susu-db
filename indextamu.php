@@ -114,7 +114,7 @@ include('db.php'); // Include public database connection
                   $harga = htmlentities($row['harga']);
                   echo "<div class='card-produk'>";
                   echo "<h3>$nama</h3>";
-                  echo "<p>Harga:  " . number_format($harga, 0, ',', '.') . " k </p>";
+                  echo "<p>Harga:  " . number_format($harga, 0, ',', '.') . "k </p>";
                   echo "</div>";
               }
               // Free result set
