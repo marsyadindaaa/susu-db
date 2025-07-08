@@ -1,0 +1,369 @@
+/* === Variables === */
+:root {
+  --milk-white: #fffaf0;
+  --milk-orange: #ffa500;
+  --milk-navy: #1a1a40;
+  --text-dark: #333;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --gradient-orange: linear-gradient(135deg, #ffd580, #ffa500);
+  --gradient-navy: linear-gradient(135deg, #1a1a40, #2e2e60);
+}
+
+/* === Base === */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--milk-white);
+  color: var(--text-dark);
+}
+
+/* === Header === */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: var(--milk-navy);
+  color: white;
+  box-shadow: 0 4px 8px var(--shadow);
+}
+
+.logo {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.logo span {
+  color: var(--milk-orange);
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--milk-orange);
+}
+
+/* === Hero Section === */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 50px;
+  flex-wrap: wrap;
+  background: var(--milk-white);
+  border-radius: 0 0 20px 20px;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: var(--milk-navy);
+  font-weight: bold;
+}
+
+.hero-text p {
+  margin-top: 20px;
+  font-size: 1.1em;
+}
+
+.hero-image {
+  position: relative;
+}
+
+.hero-image img {
+  width: 300px;
+}
+
+.card {
+  position: absolute;
+  background: linear-gradient(135deg, #fff4dc, #ffeabf);
+  box-shadow: 0 4px 10px var(--shadow);
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 0.9em;
+  transition: transform 0.3s ease;
+  color: var(--milk-navy);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.susu {
+  top: 10px;
+  right: 10px;
+  animation: wobble 1s infinite alternate;
+}
+
+.alami {
+  top: 60px;
+  left: -50px;
+  animation: wobble 1s infinite alternate;
+}
+
+.higienis {
+  bottom: 80px;
+  left: 0;
+  animation: wobble 1s infinite alternate;
+}
+
+.segar {
+  bottom: 20px;
+  right: 30px;
+  animation: wobble 1s infinite alternate;
+}
+
+.Beranda{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 50px;
+  flex-wrap: wrap;
+  background: var(--gradient-orange);
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 6px 12px var(--shadow);
+}
+
+/* === Katalog Section === */
+.katalog {
+  padding: 40px 50px;
+  background: #fff;
+}
+
+.katalog h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2em;
+  color: var(--milk-navy);
+}
+
+.produk {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.card-produk {
+  background: linear-gradient(135deg, #fff4dc, #ffeabf);
+  border-radius: 12px;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 4px 12px var(--shadow);
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.card-produk:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-produk img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* === Lokasi === */
+.lokasi {
+  padding: 40px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.lokasi iframe {
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+/* === Ulasan Section === */
+.ulasan-section {
+  padding: 40px 20px;
+  background-color: #fffaf5;
+  text-align: center;
+}
+
+.ulasan-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  gap: 10px;
+  border-radius: 15px;
+  padding: 20px;
+  background: var(--gradient-orange);
+  box-shadow: 0 0 10px var(--shadow);
+  margin: 20px auto;
+  width: 90%;
+  max-width: 1000px;
+}
+
+#ulasanContainer {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  width: 80%;
+}
+
+.card-ulasan {
+  min-width: 250px;
+  flex-shrink: 0;
+  padding: 15px;
+  border-radius: 10px;
+  background: white;
+  text-align: center;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card-ulasan:hover {
+  transform: translateY(-8px);
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.15);
+}
+
+button#prevBtn, button#nextBtn {
+  background-color: orange;
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  height: 50px;
+  width: 50px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+button#prevBtn:hover,
+button#nextBtn:hover {
+  background-color: darkorange;
+}
+
+  /* Default: tidak terlihat di desktop */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Tampilkan toggle hanya di layar kecil */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    display: none;
+    background: rgba(255, 108, 63, 0.9);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    padding: 1rem;
+    border-radius: 0 0 0 10px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+}
+
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text,
+  .hero-image {
+    max-width: 100%;
+  }
+
+  .hero-image img {
+    margin-top: 20px;
+  }
+
+/* === Floating WhatsApp Button === */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
+  z-index: 10000;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-button img {
+  width: 30px;
+  height: 30px;
+}
+
+/* === Scroll to Top Button === */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  display: none;
+  background-color: var(--milk-orange);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  animation: floaty 2s ease-in-out infinite;
+  z-index: 10000;
+}
+
+/* === Animations === */
+@keyframes floaty {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes wobble {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
