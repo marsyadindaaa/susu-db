@@ -6,7 +6,7 @@ if (!isset($_SESSION['login'])) {
 }
 ?>
 <?php
-include 'config.php';
+include '<admin>config.php';
 
 // Ambil data berdasarkan ID
 $id = $_GET['id'];
@@ -24,7 +24,7 @@ $data = $result->fetch_assoc();
   <button type="submit">Update</button>
 </form>
 <?php
-include 'config.php';
+include '<admin>config.php';
 
 $id    = $_POST['id'];
 $nama  = $_POST['nama_produk'];
