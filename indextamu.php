@@ -113,7 +113,6 @@ include('db.php'); // Include public database connection
                   $nama = htmlentities($row['nama_produk']);
                   $harga = htmlentities($row['harga']);
                   echo "<div class='card-produk'>";
-                  echo "<img src='https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop' alt='Gambar Produk' style='width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 10px;'>";
                   echo "<h3>$nama</h3>";
                   echo "<p>Harga: Rp " . number_format($harga, 0, ',', '.') . "</p>";
                   echo "</div>";
