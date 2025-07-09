@@ -68,11 +68,6 @@ include('db.php'); // Include public database connection
       <section id="katalog">
         <h2>Daftar Menu</h2>
         <div class="produk">
-          <!-- Sumur Series -->
-          <div class="card-produk"><h3>Sumur Tawar</h3><p>Harga: 5k</p></div>
-          <div class="card-produk"><h3>Sumur Manis</h3><p>Harga: 6k</p></div>
-          <div class="card-produk"><h3>Sumur Vanilla</h3><p>Harga: 6k</p></div>
-        
           <?php
           // Query to fetch dynamic products
           $result = $conn->query("SELECT * FROM produk ORDER BY id DESC");
