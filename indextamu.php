@@ -72,31 +72,7 @@ include('db.php'); // Include public database connection
           <div class="card-produk"><h3>Sumur Tawar</h3><p>Harga: 5k</p></div>
           <div class="card-produk"><h3>Sumur Manis</h3><p>Harga: 6k</p></div>
           <div class="card-produk"><h3>Sumur Vanilla</h3><p>Harga: 6k</p></div>
-          <div class="card-produk"><h3>Sumur Anggur</h3><p>Harga: 6k</p></div>
-          <div class="card-produk"><h3>Sumur Melon</h3><p>Harga: 6k</p></div>
-          <div class="card-produk"><h3>Sumur Stroberi</h3><p>Harga: 6k</p></div>
-          <div class="card-produk"><h3>Sumur Mocca</h3><p>Harga: 6k</p></div>
-          <div class="card-produk"><h3>Sumur Greentea</h3><p>Harga: 6k</p></div>
-          <div class="card-produk"><h3>Sumur Coklat</h3><p>Harga: 6k</p></div>
-          <div class="card-produk"><h3>Sumur Madu</h3><p>Harga: 8k</p></div>
-          <div class="card-produk"><h3>Sumur Jahe</h3><p>Harga: 8k</p></div>
-          <div class="card-produk"><h3>Sumur Extra Joss</h3><p>Harga: 8k</p></div>
-          <div class="card-produk"><h3>½ Liter Rasa</h3><p>Harga: 12k</p></div>
-          <div class="card-produk"><h3>½ Liter Tawar</h3><p>Harga: 11k</p></div>
-          <div class="card-produk"><h3>1 Liter Rasa</h3><p>Harga: 22k</p></div>
-          <div class="card-produk"><h3>1 Liter Tawar</h3><p>Harga: 21k</p></div>
-      
-          <!-- Roti Bakar Kukus -->
-          <div class="card-produk"><h3>Roti Gula</h3><p>Harga: 6k</p></div>
-          <div class="card-produk"><h3>Roti Susu</h3><p>Harga: 7k</p></div>
-          <div class="card-produk"><h3>Roti Coklat</h3><p>Harga: 7k</p></div>
-          <div class="card-produk"><h3>Roti Stroberi</h3><p>Harga: 7k</p></div>
-          <div class="card-produk"><h3>Roti Kacang</h3><p>Harga: 7k</p></div>
-          <div class="card-produk"><h3>Roti 2 Rasa</h3><p>Harga: 8k</p></div>
-          <div class="card-produk"><h3>Roti 3 Rasa</h3><p>Harga: 9k</p></div>
-          <div class="card-produk"><h3>Roti Keju</h3><p>Harga: 8k</p></div>
-
-          <!-- Dynamic Products from Database -->
+        
           <?php
           // Query to fetch dynamic products
           $result = $conn->query("SELECT * FROM produk ORDER BY id DESC");
