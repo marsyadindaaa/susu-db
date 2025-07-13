@@ -178,18 +178,6 @@ nav a:hover {
   justify-content: space-between;
 }
 
-.card-produk:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-}
-
-.card-produk img {
-  width: 100%;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
 
 .card-produk h3 {
   margin: 10px 0;

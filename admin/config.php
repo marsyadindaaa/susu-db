@@ -10,5 +10,5 @@ if ($conn->connect_error) {
   die("Koneksi gagal: " . $conn->connect_error);
 }
 
-echo "Koneksi Berhasil<br>";
+echo "<br>";
 ?>
