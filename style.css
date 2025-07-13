@@ -168,28 +168,29 @@ nav a:hover {
   background: linear-gradient(135deg, #fff4dc, #ffeabf);
   border-radius: 12px;
   text-align: center;
-  padding: 15px;
-  box-shadow: 0 4px 12px var(--shadow);
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   border: none;
-  min-height: 100px;
+  width: 180px;
+  min-height: 120px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-
 .card-produk h3 {
-  margin: 10px 0;
-  color: var(--milk-navy);
-  font-size: 1.1em;
+  margin: 8px 0;
+  font-size: 1em;
 }
 
 .card-produk p {
-  margin: 5px 0;
+  margin: 4px 0;
+  font-size: 0.95em;
   font-weight: bold;
-  color: var(--milk-orange);
+  color: var(--milk-orange); /* warna netral */
 }
+
 
 /* === Lokasi === */
 .lokasi {
