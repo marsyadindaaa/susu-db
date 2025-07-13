@@ -172,6 +172,7 @@ nav a:hover {
   box-shadow: 0 4px 12px var(--shadow);
   transition: all 0.3s ease;
   border: none;
+  min-height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
